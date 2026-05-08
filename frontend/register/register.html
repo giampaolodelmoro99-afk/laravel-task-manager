@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preload" href="css/register.css" as="style" />
+    <link rel="preload" href="js/register.js" as="script" />
+    <link rel="stylesheet" href="css/register.css" />
+    <script src="js/register.js" defer></script>
+
+    <link rel="icon" href="../assets/logoToDoList.png" />
+    <link rel="canonical" href="https://www.toDoList.it" />
+
+    <meta name="keywords"
+        content="registrazione, signup, creare account, to-do list, gestione attività, lista cose da fare, produttività, organizzazione, registrazione utente" />
+    <meta name="description"
+        content="Registrati alla nostra To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic." />
+
+    <meta name="author" content="Del Moro Gianpaolo" />
+    <meta name="copyright" content="Del Moro Gianpaolo" />
+
+    <title>toDoList</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.toDoList.it">
+    <meta property="og:title" content="toDoList">
+    <meta property="og:description"
+        content="Registrati alla nostra To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic.">
+    <meta property="og:image" content="../assets/logoToDoList.png">
+    <meta property="og:site_name" content="toDoList">
+    <meta property="og:locale" content="it_IT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.toDoList.it">
+    <meta name="twitter:title" content="toDoList">
+    <meta name="twitter:description"
+        content="Registrati alla nostra To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic.">
+    <meta name="twitter:image" content="../assets/logoToDoList.png">
+    <meta name="twitter:site" content="@toDoList">
+</head>
+
+<body>
+    <main class="registration-container">
+        <section class="registration-form" aria-labelledby="crea-account">
+            <h1 id="crea-account">Crea account</h1>
+            <p>registrati alla nostra toDoList</p>
+            <fieldset class="registration-field">
+                <legend class="registration-title">Registrazione</legend>
+                <div class="registration-content">
+                    <label for="full-name">Nome completo</label><span id="error-full-name-field"></span>
+                    <input type="text" id="full-name" placeholder="Mario Rossi" minlength="2" maxlength="50" pattern="^[A-Za-zÀ-ÿ'\s]+$" required/>
+                </div>
+                <div class="registration-content">
+                    <label for="email">Indirizzo email</label><span id="error-email-field"></span>
+                    <input type="email" id="email" placeholder="esempio@mail.it" required/>
+                </div>
+                <div class="registration-content">
+                    <label for="password">Password</label><span id="error-password-field"></span>
+                    <input type="password" id="password" minlength="8" placeholder="minimo 8 caratteri..." required/>
+                </div>
+                <div class="registration-content">
+                    <label for="confirm-password">Conferma password</label><span id="error-confirm-password-field"></span>
+                    <input type="password" id="confirm-password" minlength="8" placeholder="minimo 8 caratteri..." required/>
+                </div>
+                <div class="registration-content">
+                    <input type="submit" id="registration-button" value="Registrati"/>
+                </div>
+                <div class="registration-content">
+                    <div id="registration-result"></div>
+                </div>
+                <div class="registration-content">
+                    <p>Hai già un account? <a href="" >Accedi qui</a></p>
+                </div>
+            </fieldset>
+        </section>
+    </main>
+</body>
+
+</html>
