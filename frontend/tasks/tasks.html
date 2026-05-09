@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preload" href="css/tasks.css" as="style" />
+    <link rel="preload" href="js/tasks.js" as="script" />
+    <link rel="stylesheet" href="css/tasks.css" />
+    <script src="js/tasks.js" defer></script>
+
+    <link rel="icon" href="../assets/logoToDoList.png" />
+    <link rel="canonical" href="https://www.toDoList.it" />
+
+    <meta name="keywords" content="to-do list, gestione attività, lista cose da fare, produttività, organizzazione" />
+    <meta name="description"
+        content="To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic." />
+
+    <meta name="author" content="Del Moro Gianpaolo" />
+    <meta name="copyright" content="Del Moro Gianpaolo" />
+
+    <title>Le mie Task | ToDoList"</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.toDoList.it">
+    <meta property="og:title" content="toDoList">
+    <meta property="og:description"
+        content="To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic.">
+    <meta property="og:image" content="../assets/logoToDoList.png">
+    <meta property="og:site_name" content="toDoList">
+    <meta property="og:locale" content="it_IT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.toDoList.it">
+    <meta name="twitter:title" content="toDoList">
+    <meta name="twitter:description"
+        content="To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic.">
+    <meta name="twitter:image" content="../assets/logoToDoList.png">
+    <meta name="twitter:site" content="@toDoList">
+</head>
+
+<body>
+    <header>
+        <h1>Benvenuto</h1>
+    </header>
+    <main>
+        <section id="toDoList-form-container" aria-labelledby="toDoList">
+            <h2 id="toDoList">Crea la tua to-do list</h2>
+            <div id="container-toDoList">
+                <form id="form-todolist" class="form-todolist">
+                    <fieldset class="todolist-fieldset">
+                        <legend>Completa i campi</legend>
+                        <div class="todolist-content">
+                            <label for="title">Task</label><span id="errore-title"></span>
+                            <input type="text" name="title" id="title" required placeholder="Inserisci task"
+                                minlength="2" maxlength="255" autofocus pattern="^[A-Za-zÀ-ÿ][A-Za-zÀ-ÿ\s']*$"
+                                title="Usa solo lettere e spazi, niente numeri o simboli speciali." />
+                        </div>
+                        <div class="todolist-content">
+                            <label for="date">Data</label><span id="errore-date"></span>
+                            <input type="date" name="date" id="date" required />
+                        </div>
+                        <div class="todolist-content">
+                            <label for="time">Ora</label><span id="errore-time"></span>
+                            <input type="time" name="time" id="time" step="60" required />
+                        </div>
+                        <div class="todolist-content">
+                            <input type="submit" id="add" value="invio" />
+                        </div>
+                        <div id="result-task"></div>
+                    </fieldset>
+                </form>
+            </div>
+        </section>
+        <div class="logout-content">
+            <input type="button" id="logout-button" value="Logout">
+        </div>
+        <div id="container-tabel">
+        </div>
+    </main>
+</body>
+
+</html>

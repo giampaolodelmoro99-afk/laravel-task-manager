@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="preload" href="css/login.css" as="style" />
+    <link rel="preload" href="js/login.js" as="script" />
+    <link rel="stylesheet" href="css/login.css" />
+    <script src="js/login.js" defer></script>
+
+    <link rel="icon" href="../assets/logoToDoList.png" />
+    <link rel="canonical" href="https://www.login-toDoList.it" />
+
+    <meta name="keywords"
+        content="accedi, login, accedi all'account, to-do list, gestione attività, lista cose da fare, produttività, organizzazione" />
+    <meta name="description"
+        content="Accedi alla  To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic." />
+
+    <meta name="author" content="Del Moro Gianpaolo" />
+    <meta name="copyright" content="Del Moro Gianpaolo" />
+
+    <title>Login toDoList</title>
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.login-toDoList.it">
+    <meta property="og:title" content="toDoList">
+    <meta property="og:description"
+        content="Accedi alla To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic.">
+    <meta property="og:image" content="../assets/logoToDoList.png">
+    <meta property="og:site_name" content="toDoList">
+    <meta property="og:locale" content="it_IT">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.login-toDoList.it">
+    <meta name="twitter:title" content="toDoList">
+    <meta name="twitter:description"
+        content="Accedi alla  To-Do List gratuita. Organizza le tue attività quotidiane, imposta promemoria e aumenta la tua produttività in pochi clic.">
+    <meta name="twitter:image" content="../assets/logoToDoList.png">
+    <meta name="twitter:site" content="@toDoList">
+</head>
+
+<body>
+    <main class="login-container">
+        <section class="login-form-container" aria-labelledby="accedi">
+            <h1 id="accedi">Accedi all'area personale</h1>
+            <form id="login-form">
+                <fieldset class="login-fieldset">
+                    <legend class="login-title">Accedi</legend>
+                    <p>Accedi alla tua area personale</p>
+                    <div class="login-content">
+                        <label for="email">Indirizzo email</label>
+                        <input type="email" id="email-login" placeholder="esempio@mail.it" autofocus autocomplete="email"
+                            required />
+                    </div>
+                    <div class="login-content">
+                        <label for="password">Password</label>
+                        <input type="password" id="password-login" minlength="8" placeholder="minimo 8 caratteri..." autocomplete="current-password" required />
+                    </div>
+                    <div class="login-content">
+                        <input type="submit" id="login-button" value="Accedi" />
+                    </div>
+                    <div class="login-content">
+                        <div id="login-result"></div>
+                    </div>
+                    <div class="login-content">
+                        <p>Non hai un account? <a href="../register/register.html" hreflang="it">Registrati qui</a></p>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

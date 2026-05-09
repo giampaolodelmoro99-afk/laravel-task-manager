@@ -1,9 +1,9 @@
-const btnRegistration = document.getElementById('registration-button');
+const registrationForm = document.getElementById('registration-form');
 
-const inputFullName = document.getElementById('full-name');
-const inputEmail = document.getElementById('email');
-const inputPassword = document.getElementById('password');
-const inputConfirmPassword = document.getElementById('confirm-password');
+const inputFullName = document.getElementById('full-name-register');
+const inputEmail = document.getElementById('email-register');
+const inputPassword = document.getElementById('password-register');
+const inputConfirmPassword = document.getElementById('confirm-password-register');
 
 const errorFullNameField = document.getElementById('error-full-name-field');
 const errorEmailField = document.getElementById('error-email-field');
@@ -38,7 +38,7 @@ function errorEmail(){
 
     if(inputEmail.value === ""){
         errorEmailField.style.color = "#dc3545"
-        errorEmailField.textContent = "*Campo oblligatorio";
+        errorEmailField.textContent = "*Campo obbligatorio";
         
         return false;
     }
@@ -102,7 +102,7 @@ function errorConfirmPassword(){
 }
 
 
-btnRegistration.addEventListener('click', async (e) =>{
+registrationForm.addEventListener('submit', async (e) =>{
 
     e.preventDefault();
 
@@ -145,13 +145,7 @@ btnRegistration.addEventListener('click', async (e) =>{
                 resultRegistration.style.color = "#dc3545";
                 resultRegistration.textContent = "Uno o più campi invalidi";
             }else{
-                resultRegistration.style.color = "#28A745";
-                resultRegistration.textContent = data.message;
-
-                inputFullName.value = "";
-                inputEmail.value  = "";
-                inputPassword.value = "";
-                inputConfirmPassword.value = "";
+                window.location.href = "../login/login.html"
             }
 
 

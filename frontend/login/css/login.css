@@ -14,13 +14,13 @@ body {
     min-height: 100vh;
 }
 
-.registration-container {
+.login-container {
     width: 100%;
     max-width: 450px;
     padding: 20px;
 }
 
-.registration-form-container {
+.login-form-container {
     background-color: #ffffff;
     padding: 40px;
     border-radius: 12px;
@@ -40,11 +40,11 @@ p {
     margin-bottom: 25px;
 }
 
-.registration-fieldset {
+.login-fieldset {
     border: none;
 }
 
-.registration-title {
+.login-title {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -55,7 +55,7 @@ p {
     border: 0;
 }
 
-.registration-content {
+.login-content {
     margin-bottom: 20px;
     text-align: left;
     position: relative;
@@ -68,7 +68,6 @@ label {
     font-size: 14px;
 }
 
-input[type="text"],
 input[type="email"],
 input[type="password"] {
     width: 100%;
@@ -84,15 +83,7 @@ input:focus {
     border-color: #4a90e2;
 }
 
-span[id^="error-"] {
-    display: block;
-    color: #e74c3c;
-    font-size: 12px;
-    margin-top: 4px;
-    min-height: 16px;
-}
-
-#registration-button {
+#login-button {
     width: 100%;
     padding: 14px;
     background-color: #4a90e2;
@@ -106,22 +97,32 @@ span[id^="error-"] {
     margin-top: 10px;
 }
 
-#registration-button:hover {
+#login-button:hover {
     background-color: #357abd;
 }
 
-.registration-content a {
+.login-content a {
     color: #4a90e2;
     text-decoration: none;
     font-weight: 600;
 }
 
-.registration-content a:hover {
+.login-content a:hover {
     text-decoration: underline;
 }
 
-#registration-result {
+#login-result {
     text-align: center;
     font-weight: 500;
     margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+    .login-form-container {
+        padding: 30px 20px;
+    }
+    
+    h1 {
+        font-size: 28px;
+    }
 }

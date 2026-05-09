@@ -10,18 +10,7 @@ class NoteController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(Request $request, $taskId)
-    {
-        $task = $request->user()->tasks()->find($taskId);
-
-        if (!$task) {
-            return response()->json(['message' => 'Utente non autorizzato'], 404);
-        }
-
-        $notes = $task->notes;
-
-        return response()->json($notes, 200);
-    }
+    
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +24,6 @@ class NoteController extends Controller
         }
 
         $validated = $request->validate([
-            'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'is_completed' => ['boolean']
         ]);
@@ -69,7 +57,6 @@ class NoteController extends Controller
         }
         
         $validated = $request->validate([
-            'title' => ['required', 'string', 'max:255'],
             'description' => ['required', 'string'],
             'is_completed' => ['boolean']
         ]);

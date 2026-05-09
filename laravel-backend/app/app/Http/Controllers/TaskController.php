@@ -12,11 +12,7 @@ class TaskController extends Controller
      */
     public function index(Request $request)
     {
-        $tasks = $request->user()->tasks;
-
-        if (!$tasks) {
-            return response()->json(['message' => 'Utente non autorizzato'], 404);
-        }
+        $tasks = $request->user()->tasks()->with('notes')->get();
 
         return response()->json($tasks, 200);
     }
@@ -30,7 +26,7 @@ class TaskController extends Controller
             'title' => ['required', 'string', 'max:255'],
             'is_completed' => ['boolean'],
             'date' => ['date'],
-            'time' => ['date_format:H:i']
+            'time' => ['required']
 
         ]);
 
@@ -64,8 +60,8 @@ class TaskController extends Controller
         $validated = $request->validate([
             'title' => ['required', 'string', 'max:255'],
             'is_completed' => ['boolean'],
-            'date' => ['date'],
-            'time' => ['date_format:H:i']
+            'date' => ['required','date'],
+            'time' => ['required']
 
         ]);
 
